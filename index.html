@@ -40,10 +40,69 @@
               </div> 
                   <div class="about-col-2">
                       <h1 class="sub-title">About Me</h1>
+                      <p>Hello, I'm Harish Bhong, a passionate web developer eager to make an impact in the digital world. With a strong foundation in HTML, CSS, and JavaScript, I'm on a journey to expand my skills and craft compelling online experiences.
+
+                        My fascination with technology and creativity has led me to pursue web development as a career. I thrive on the challenge of bringing ideas to life through code, constantly pushing myself to learn and grow in this dynamic field.
+                        
+                        While I may be at the beginning of my journey, my enthusiasm and dedication are unwavering. I am committed to honing my skills, staying updated with the latest industry trends, and embracing new technologies to deliver innovative solutions.</p>
+                      <div class="tab-titles">
+                          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                          <p class="tab-links" onclick="opentab('education')">Education</p>
+                      </div>
+                      <div class="tab-contents active-tab" id="skills">
+                          <ul>
+                            <li><span>Web-Dev</span><br>Developing simple and responsive websites</li>
+                            <li><span>FrontEnd</span><br>Html CSS3 JavaScript</li>
+                            <li><span>BackEnd</span><br>Express with Node.js</li>
+                          </ul>
+                      </div>
+                      <div class="tab-contents" id="experience">
+                          <ul>
+                            <li><span>Nov 2023 - Mar 2024</span><br>Internship at 7mentors</li>
+                          </ul>
+                      </div>
+                      <div class="tab-contents" id="education">
+                          <ul>
+                            <li><span>Currently</span><br>Persuing Bachelors in Computer Scince at MESWCOE Pune.</li>
+                            <li><span>HSC (2022)</span><br>From Dr.Sonawane College Barshi.</li>
+                          </ul>
+                      </div>
                   </div>
           </div>
       </div>
   </div>
-  
+
+<!-- -------------- Services --------------- -->
+
+<div id="services">
+    <div class="container"> 
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        
+      </div>
+    </div>
+</div>
+
+
+  <script>
+    // ************ About section Js ************
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab");
+    }
+
+    // ********** END of About section Js *************
+  </script>
 </body>
 </html>
