@@ -54,17 +54,22 @@
                             <li><span>Web-Dev</span><br>Developing simple and responsive websites</li>
                             <li><span>FrontEnd</span><br>Html CSS3 JavaScript</li>
                             <li><span>BackEnd</span><br>Express with Node.js</li>
+                            <li><span>C++, Python, Java</span><br>Data structures and algorithms</li>
                           </ul>
                       </div>
                       <div class="tab-contents" id="experience">
                           <ul>
-                            <li><span>Nov 2023 - Mar 2024</span><br>Internship at 7mentors</li>
+                            <li><span>Nov 2023</span><br>Blogs website</li>
+                            <li><span>Dec 2023</span><br>Agrotech Organic plants website</li>
+                            
+                            <li><span>Free-lancing</span><br>Open-scource contribution at Github </li>
                           </ul>
                       </div>
                       <div class="tab-contents" id="education">
-                          <ul>
+                          <ul>                           
                             <li><span>Currently</span><br>Persuing Bachelors in Computer Scince at MESWCOE Pune.</li>
                             <li><span>HSC (2022)</span><br>From Dr.Sonawane College Barshi.</li>
+                            <li><span>Self-taught</span><br>Getting educated from free platforms like Youtube and free courses available on internet.</li>
                           </ul>
                       </div>
                   </div>
@@ -153,17 +158,19 @@
                   <a href="https://facebook.com">  <i class="fa-brands fa-facebook"></i>         </a>
                   <a href="https://instagram.com"> <i class="fa-brands fa-square-instagram"></i> </a>
                   <a href="https://linkedin.com">  <i class="fa-brands fa-linkedin"></i>         </a>
+                  <a href="https://github.com/HarishBhong">    <i class="fa-brands fa-github"></i>             </a>
                 </div>
                   <a href="images/CV.pdf" download class="btn btn-2">Download CV</a>
             </div>
-          
+                      
             <div class="contact-right">
-              <form>
+              <form name="submit-to-google-sheet">
                 <input type="text" name="Name" placeHolder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
                 <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
                 <button type="submit" class="btn btn-2">Submit</button>
               </form>
+              <span id="msg"></span>
             </div>
         </div>
   </div>
@@ -186,7 +193,7 @@
           tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classlist.add("active-tab");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 // ********** END of About section Js *************
   </script>
@@ -201,6 +208,24 @@
     function closemenu(){
       sidemenu.style.right = "-200px";
     }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKT8gURkyGeb-34mKwyQ5np9cVrnYa8ipNn1b7Gc_bZkXWkha9MxKz_eVDBejNKLeBg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Message sent successfully"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000) //this is 5000 milli seconds therefore it is 5sec
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
   </script>
 </body>
 </html>
