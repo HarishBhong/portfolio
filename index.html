@@ -8,29 +8,27 @@
   <script src="https://kit.fontawesome.com/5b43078b20.js" crossorigin="anonymous"></script> <!--from fontawesome website-->
 </head>
 <body>
-
-  <!-- header section -->
-  <div id="header">
-    <div class="container">
-      <nav>
-        
+<!-- header section -->
+<div id="header">
+  <div class="container">
+      <nav>        
           <button class ="logo">H a r i s h...</button>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!-- menu icon -->
       </nav>
       <div class="header-text">
         <p>WEB Developer</p>
         <h1>Hi, I'm <span>Harish</span><br>From Bharat ie.India</h1>
-
       </div>
-
-    </div>
-  </div>
+   </div>
+</div>
 
   <!-- About section -->
   <div id="about">
@@ -41,7 +39,7 @@
               </div> 
                   <div class="about-col-2">
                       <h1 class="sub-title">About Me</h1>
-                      <p>Hello, I'm Harish Bhong, a <p1>passionate web developer</p1> eager to make an impact in the digital world. With a strong foundation in HTML, CSS, and JavaScript, I'm on a journey to expand my skills and craft compelling online experiences.
+                      <p>Hello, I'm <p1>Harish Bhong</p1>, a passionate web developer eager to make an impact in the digital world. With a strong foundation in HTML, CSS, and JavaScript, I'm on a journey to expand my skills and craft compelling online experiences.
 
                         My fascination with technology and creativity has led me to pursue web development as a career. I thrive on the challenge of bringing ideas to life through code, constantly pushing myself to learn and grow in this dynamic field.
                         
@@ -74,8 +72,7 @@
       </div>
   </div>
 
-<!-- -------------- Services --------------- -->
-
+<!-- --------------  Services -------------- -->
 <div id="services">
     <div class="container"> 
       <h1 class="sub-title">My Services</h1>
@@ -103,7 +100,7 @@
     </div>
 </div>
 
-<!-- ************* Portfolio ************-->
+<!-- ************* Portfolio ************ -->
 <div id="portfolio">
       <div class="container">
         <h1 class="sub-title">My Work</h1>
@@ -141,15 +138,46 @@
         </div>
         <a href="#" class="btn">See more</a>
       </div>
+</div>
 
+<!-- ************* Contact ************ -->
+<div id="contact">
+  <div class="container">
+        <div class="row">
+
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> harishbhong@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> 7447200202</p>
+                <div class="social-icons">
+                  <a href="https://facebook.com">  <i class="fa-brands fa-facebook"></i>         </a>
+                  <a href="https://instagram.com"> <i class="fa-brands fa-square-instagram"></i> </a>
+                  <a href="https://linkedin.com">  <i class="fa-brands fa-linkedin"></i>         </a>
+                </div>
+                  <a href="images/CV.pdf" download class="btn btn-2">Download CV</a>
+            </div>
+          
+            <div class="contact-right">
+              <form>
+                <input type="text" name="Name" placeHolder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn-2">Submit</button>
+              </form>
+            </div>
+        </div>
+  </div>
+  <div class="copy-right">
+    <p><i class="fa-solid fa-copyright"></i>opyright by<i class="fa-solid fa-at"></i> harishbhong</p>
+  </div>
 </div>
 
   <script>
-    // ************ About section Js ************
+// ************ About section Js ************
 
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
-    
+
     function opentab(tabname){
         for(tablink of tablinks){
           tablink.classList.remove("active-link");
@@ -160,8 +188,19 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classlist.add("active-tab");
     }
+// ********** END of About section Js *************
+  </script>
 
-    // ********** END of About section Js *************
+  <script>
+    var sidemenu=document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
   </script>
 </body>
 </html>
