@@ -5,169 +5,240 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harish Bhong | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="jquery.js"></script>
   <script src="https://kit.fontawesome.com/5b43078b20.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container nav-shell">
-      <a class="brand" href="#top">harish<span>.bhong</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="siteNav">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="hero container card" aria-labelledby="hero-heading">
-      <p class="kicker">Full Stack Developer • Pune, India</p>
-      <h1 id="hero-heading">Building reliable digital systems with a research-first engineering mindset.</h1>
-      <p class="lead">I design clean interfaces, practical APIs, and maintainable developer workflows with an emphasis on clarity, performance, and long-term usability.</p>
+<div id="header">
+  <div class="container">
+    <nav>
+      <button class="logo">HB<span>/eternal</span></button>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p class="eyebrow">Full Stack Developer • Pune, India</p>
+      <h1>I build <span>modern products</span><br>with an /eternal engineering mindset.</h1>
+      <p class="hero-copy">Focused on performant interfaces, scalable APIs, and practical developer tooling that ships quickly and lasts.</p>
       <div class="hero-actions">
-        <a href="#projects" class="button">View Research & Projects</a>
-        <a href="#contact" class="button button-ghost">Contact Me</a>
+        <a href="#portfolio" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Let's Work Together</a>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-    <section class="container section" id="about" aria-labelledby="about-heading">
-      <div class="section-head">
-        <h2 id="about-heading">About</h2>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/user.png" alt="Harish Bhong profile photo">
       </div>
-      <article class="card about-grid">
-        <img src="images/user.png" alt="Portrait of Harish Bhong" class="profile-image">
-        <div>
-          <p>I am a developer focused on turning ideas into stable and useful products. My process is grounded in structured thinking, practical architecture, and clear communication.</p>
-          <p>I work primarily with JavaScript ecosystems and enjoy solving product problems that sit between interface design, backend reliability, and developer productivity.</p>
-          <p class="meta-line"><span class="code-pill">focus</span> frontend architecture · backend services · developer experience</p>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>
+          I'm Harish Bhong, a developer who enjoys turning ideas into reliable digital products.
+          I like crafting clean user experiences while keeping the backend maintainable, observable, and ready to scale.
+        </p>
+        <p>
+          My current focus is JavaScript ecosystems, API design, and developer-first product experiences that are fast, elegant, and practical.
+        </p>
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
         </div>
-      </article>
-    </section>
 
-    <section class="container section" id="projects" aria-labelledby="projects-heading">
-      <div class="section-head">
-        <h2 id="projects-heading">Projects & Research</h2>
-      </div>
-      <div class="card-grid">
-        <article class="card project-card">
-          <h3>Blog Platform</h3>
-          <p>Designed and delivered a content publishing platform with complete create, edit, and delete workflows for fast authoring.</p>
-          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </article>
-        <article class="card project-card">
-          <h3>Food Delivery Interface Study</h3>
-          <p>Built a responsive ordering flow focused on interaction clarity, reduced friction, and mobile-first usability.</p>
-          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </article>
-        <article class="card project-card">
-          <h3>Agrotech Business Web Presence</h3>
-          <p>Developed an industry-facing website to communicate services, build trust, and improve conversion through concise structure.</p>
-          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer">Repository <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </article>
-      </div>
-    </section>
-
-    <section class="container section" id="skills" aria-labelledby="skills-heading">
-      <div class="section-head">
-        <h2 id="skills-heading">Skills</h2>
-      </div>
-      <div class="card skill-card">
-        <ul class="skill-groups">
-          <li><span>Frontend</span> HTML · CSS · JavaScript · Responsive Architecture</li>
-          <li><span>Backend</span> Node.js · Express · REST API Design</li>
-          <li><span>Workflow</span> Git · GitHub · Debugging · Performance Tuning</li>
-          <li><span>Core CS</span> Data Structures · Algorithms · Problem Solving</li>
-        </ul>
-        <div class="tag-row" aria-label="Core technologies">
-          <span class="code-pill">html</span>
-          <span class="code-pill">css</span>
-          <span class="code-pill">javascript</span>
-          <span class="code-pill">node</span>
-          <span class="code-pill">express</span>
-          <span class="code-pill">git</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="container section" id="contact" aria-labelledby="contact-heading">
-      <div class="section-head">
-        <h2 id="contact-heading">Contact & Links</h2>
-      </div>
-      <div class="contact-grid">
-        <article class="card">
-          <ul class="contact-list">
-            <li><i class="fa-solid fa-envelope"></i><a href="mailto:harishbhong@gmail.com">harishbhong@gmail.com</a></li>
-            <li><i class="fa-solid fa-phone"></i><a href="tel:+917447200202">+91 74472 00202</a></li>
-            <li><i class="fa-brands fa-github"></i><a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><i class="fa-brands fa-linkedin"></i><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Frontend</span><br>HTML, CSS, JavaScript, responsive UI architecture</li>
+            <li><span>Backend</span><br>Node.js, Express, REST APIs, authentication basics</li>
+            <li><span>Developer Workflow</span><br>Git, GitHub, debugging, performance-minded coding</li>
+            <li><span>Core CS</span><br>Data structures, algorithms, problem solving</li>
           </ul>
-          <a href="images/CV.pdf" download class="button">Download CV</a>
-        </article>
+        </div>
 
-        <article class="card">
-          <form name="submit-to-google-sheet" class="contact-form">
-            <label>
-              <span>Name</span>
-              <input type="text" name="Name" placeholder="Your Name" required>
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="Email" placeholder="Your Email" required>
-            </label>
-            <label>
-              <span>Message</span>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-            </label>
-            <button type="submit" class="button">Send Message</button>
-            <span id="msg" aria-live="polite"></span>
-          </form>
-        </article>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2024</span><br>Built and shipped a blog platform with CRUD workflows</li>
+            <li><span>2024</span><br>Developed an organic agrotech business website</li>
+            <li><span>Open Source</span><br>Contributed to public GitHub repositories and peer projects</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>B.E. Computer Engineering</span><br>MESWCOE, Pune (Pursuing)</li>
+            <li><span>Continuous Learning</span><br>Hands-on projects, technical documentation, and practical courses</li>
+            <li><span>Foundation</span><br>Strong focus on web fundamentals and software design basics</li>
+          </ul>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </div>
+</div>
 
-  <footer class="site-footer">
-    <p>© 2026 Harish Bhong · Built with a minimalist research-terminal aesthetic.</p>
-  </footer>
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">What I Build</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-laptop-code"></i>
+        <h2>Frontend Engineering</h2>
+        <p>Modern, responsive interfaces with clean structure, accessible UX patterns, and strong performance fundamentals.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-server"></i>
+        <h2>Backend APIs</h2>
+        <p>Practical APIs for real products, including data handling, validation, and maintainable service logic.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-code-branch"></i>
+        <h2>Developer-Focused Builds</h2>
+        <p>Projects built with clean code, versioning discipline, and simple workflows for easier collaboration.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const siteNav = document.getElementById('siteNav');
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">Selected Projects</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-1.png" alt="Blog platform preview">
+        <div class="layer">
+          <h3>Blog Platform</h3>
+          <p>Content publishing app with create, edit, and delete workflows designed for daily writing and updates.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/work-2.png" alt="Food delivery app preview">
+        <div class="layer">
+          <h3>Food Delivery UI</h3>
+          <p>Responsive ordering interface focused on simple flow, clear interactions, and clean visual hierarchy.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/work-3.png" alt="Agrotech business website preview">
+        <div class="layer">
+          <h3>Agrotech Website</h3>
+          <p>Business-facing website with service presentation, visual trust signals, and contact conversion flow.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer" class="btn">See More on GitHub</a>
+  </div>
+</div>
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = siteNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> harishbhong@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> +91 74472 00202</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCbJk6JTX3Z0nNUd2NSPmUvA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <a href="images/CV.pdf" download class="btn btn-2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn-2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right">
+    <p><i class="fa-solid fa-copyright"></i> 2026 Harish Bhong • Built with an /eternal dev style.</p>
+  </div>
+</div>
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+<script>
+  var sidemenu=document.getElementById("sidemenu");
+
+  function openmenu(){
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu(){
+    sidemenu.style.right = "-240px";
+  }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKT8gURkyGeb-34mKwyQ5np9cVrnYa8ipNn1b7Gc_bZkXWkha9MxKz_eVDBejNKLeBg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
     });
+  });
+</script>
 
-    siteNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        siteNav.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
-
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKT8gURkyGeb-34mKwyQ5np9cVrnYa8ipNn1b7Gc_bZkXWkha9MxKz_eVDBejNKLeBg/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById('msg');
-
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(() => {
-          msg.textContent = 'Message sent successfully';
-          setTimeout(() => {
-            msg.textContent = '';
-          }, 5000);
-          form.reset();
-        })
-        .catch((error) => console.error('Error!', error.message));
-    });
-  </script>
 </body>
 </html>
