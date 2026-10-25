@@ -3,286 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
+  <title>Harish Bhong | Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
-
-  <script src = "jquery.js"></script> <!--this file is to include jquery-->
-
-
-  <script src="https://kit.fontawesome.com/5b43078b20.js" crossorigin="anonymous"></script> <!--from fontawesome website-->
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/5b43078b20.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-
-      <!--  this is code is for pop-up window to check jquery is included
-
-  <script>//1 from google using internet
-    if(jQuery == "undefined"){ //  'jQyery' variable is defined in Jquery and we use this method to check if jquery is installed in web 
-      alert("jquery not included");
-
-    }
-    else{
-      alert ("jQuery is included");
-    }    
-    </script>
-                  -->
-
-<!-- header section -->
 <div id="header">
   <div class="container">
-      <nav>        
-          <button class ="logo">H a r i s h...</button>
-        <ul id="sidemenu">
-          <li><a href="#header">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openmenu()"></i> <!-- menu icon -->
-      </nav>
-      <div class="header-text">
-        <p>WEB Developer</p>
-        <h1>Hi, I'm <span>Harish</span><br>From Bharat ie.India</h1>
+    <nav>
+      <button class="logo">HB<span>/eternal</span></button>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p class="eyebrow">Full Stack Developer • Pune, India</p>
+      <h1>I build <span>modern products</span><br>with an /eternal engineering mindset.</h1>
+      <p class="hero-copy">Focused on performant interfaces, scalable APIs, and practical developer tooling that ships quickly and lasts.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Let's Work Together</a>
       </div>
-   </div>
+    </div>
+  </div>
 </div>
 
-  <!-- About section -->
-  <div id="about">
-      <div class="container">
-          <div class="row">
-              <div class="about-col-1">
-                  <img src="images/user.png">
-              </div> 
-                  <div class="about-col-2">
-                      <h1 class="sub-title">About Me</h1>
-                      <p>Hello, I'm <p1>Harish Bhong</p1>, a passionate web developer eager to make an impact in the digital world. With a strong foundation in HTML, CSS, and JavaScript, I'm on a journey to expand my skills and craft compelling online experiences.
-
-                        My fascination with technology and creativity has led me to pursue web development as a career. I thrive on the challenge of bringing ideas to life through code, constantly pushing myself to learn and grow in this dynamic field.
-                        
-                        <p1>While I may be at the beginning of my journey, my enthusiasm and dedication are unwavering.</p1> I am committed to honing my skills, staying updated with the latest industry trends, and embracing new technologies to deliver innovative solutions.</p>
-                      <div class="tab-titles">
-                          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                          <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                          <p class="tab-links" onclick="opentab('education')">Education</p>
-                      </div>
-                      <div class="tab-contents active-tab" id="skills">
-                          <ul>
-                            <li><span>Web-Dev</span><br>Developing simple and responsive websites</li>
-                            <li><span>FrontEnd</span><br>Html CSS3 JavaScript</li>
-                            <li><span>BackEnd</span><br>Express with Node.js</li>
-                            <li><span>C++, Python, Java</span><br>Data structures and algorithms</li>
-                          </ul>
-                      </div>
-                      <div class="tab-contents" id="experience">
-                          <ul>
-                            <li><span>Nov 2023</span><br>Blogs website</li>
-                            <li><span>Dec 2023</span><br>Agrotech Organic plants website</li>
-                            
-                            <li><span>Free-lancing</span><br>Open-scource contribution at Github </li>
-                          </ul>
-                      </div>
-                      <div class="tab-contents" id="education">
-                          <ul>                           
-                            <li><span>Currently</span><br>Persuing Bachelors in Computer Scince at MESWCOE Pune.</li>
-                            <li><span>HSC (2022)</span><br>From Dr.Sonawane College Barshi.</li>
-                            <li><span>Self-taught</span><br>Getting educated from free platforms like Youtube and free courses available on internet.</li>
-                          </ul>
-                      </div>
-                  </div>
-          </div>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/user.png" alt="Harish Bhong profile photo">
       </div>
-  </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>
+          I'm Harish Bhong, a developer who enjoys turning ideas into reliable digital products.
+          I like crafting clean user experiences while keeping the backend maintainable, observable, and ready to scale.
+        </p>
+        <p>
+          My current focus is JavaScript ecosystems, API design, and developer-first product experiences that are fast, elegant, and practical.
+        </p>
 
-<!-- --------------  Services -------------- -->
-<div id="services">
-    <div class="container"> 
-      <h1 class="sub-title">My Services</h1>
-      <div class="services-list">
-        <div>
-          <i class="fa-solid fa-code"></i> <!--from fontawesome website-->
-          <h2>Web Development</h2>
-          <p>Free-lancing is my passion.  I offer my clients with some interesting and responsive websites.
-            It can also be an paid open-source contribution on the github </p>
-          <a href="#">Learn more</a>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
         </div>
-        <div>
-          <i class="fa-solid fa-ghost"></i>
-          <h2>App Development</h2>
-          <p>As a freelancer I offer mobile apps services where I can build simple mobile apps at low cost  </p>
-          <a href="#">Learn more</a>
+
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Frontend</span><br>HTML, CSS, JavaScript, responsive UI architecture</li>
+            <li><span>Backend</span><br>Node.js, Express, REST APIs, authentication basics</li>
+            <li><span>Developer Workflow</span><br>Git, GitHub, debugging, performance-minded coding</li>
+            <li><span>Core CS</span><br>Data structures, algorithms, problem solving</li>
+          </ul>
         </div>
-        <div>
-          <i class="fa-solid fa-pen-to-square"></i>
-          <h2>Content Writting</h2>
-          <p>I offer content writting services to my clients in Languages- Marathi, Hindi and English   </p>
-          <a href="#">Learn more</a>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2024</span><br>Built and shipped a blog platform with CRUD workflows</li>
+            <li><span>2024</span><br>Developed an organic agrotech business website</li>
+            <li><span>Open Source</span><br>Contributed to public GitHub repositories and peer projects</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>B.E. Computer Engineering</span><br>MESWCOE, Pune (Pursuing)</li>
+            <li><span>Continuous Learning</span><br>Hands-on projects, technical documentation, and practical courses</li>
+            <li><span>Foundation</span><br>Strong focus on web fundamentals and software design basics</li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
-<!-- ************* Portfolio ************ -->
-<div id="portfolio">
-      <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="images/work-1.png">
-            <div class="layer">
-              <h3>Blogs Website</h3>
-              <p>This is simple blogs website where you can add,  delete or update your blogs on your daily basis.
-                Get source code for website on my github account.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-2.png">
-            <div class="layer">
-              <h3>Online Food Delivery Website</h3>
-              <p>This is simple blogs website where you can add,  delete or update your blogs on your daily basis.
-                Get source code for website on my github account.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/work-3.png">
-            <div class="layer">
-              <h3>Organic Agrotech Business Website</h3>
-              <p>This is simple blogs website where you can add,  delete or update your blogs on your daily basis.
-                Get source code for website on my github account.
-              </p>
-              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-            </div>
-          </div>
-        </div>
-        <a href="#" class="btn">See more</a>
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">What I Build</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-laptop-code"></i>
+        <h2>Frontend Engineering</h2>
+        <p>Modern, responsive interfaces with clean structure, accessible UX patterns, and strong performance fundamentals.</p>
       </div>
+      <div>
+        <i class="fa-solid fa-server"></i>
+        <h2>Backend APIs</h2>
+        <p>Practical APIs for real products, including data handling, validation, and maintainable service logic.</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-code-branch"></i>
+        <h2>Developer-Focused Builds</h2>
+        <p>Projects built with clean code, versioning discipline, and simple workflows for easier collaboration.</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- ************* Contact ************ -->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">Selected Projects</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-1.png" alt="Blog platform preview">
+        <div class="layer">
+          <h3>Blog Platform</h3>
+          <p>Content publishing app with create, edit, and delete workflows designed for daily writing and updates.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/work-2.png" alt="Food delivery app preview">
+        <div class="layer">
+          <h3>Food Delivery UI</h3>
+          <p>Responsive ordering interface focused on simple flow, clear interactions, and clean visual hierarchy.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/work-3.png" alt="Agrotech business website preview">
+        <div class="layer">
+          <h3>Agrotech Website</h3>
+          <p>Business-facing website with service presentation, visual trust signals, and contact conversion flow.</p>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer" class="btn">See More on GitHub</a>
+  </div>
+</div>
+
 <div id="contact">
   <div class="container">
-        <div class="row">
-
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> harishbhong@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> 7447200202</p>
-                <div class="social-icons">
-                  <a href="https://facebook.com">  <i class="fa-brands fa-facebook"></i>         </a>
-                  <a href="https://instagram.com"> <i class="fa-brands fa-square-instagram"></i> </a>
-                  <a href="https://linkedin.com">  <i class="fa-brands fa-linkedin"></i>         </a>
-                  <a href="https://github.com/HarishBhong">    <i class="fa-brands fa-github"></i></a>
-                  <a href="https://www.youtube.com/channel/UCbJk6JTX3Z0nNUd2NSPmUvA">  <i class="fa-brands fa-youtube"></i></a>
-                </div>
-                  <a href="images/CV.pdf" download class="btn btn-2">Download CV</a>
-            </div>
-                      
-            <div class="contact-right">
-              <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeHolder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn btn-2">Submit</button>
-              </form>
-              <span id="msg"></span>
-            </div>
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> harishbhong@gmail.com</p>
+        <p><i class="fa-solid fa-square-phone"></i> +91 74472 00202</p>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/HarishBhong" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCbJk6JTX3Z0nNUd2NSPmUvA" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
         </div>
+        <a href="images/CV.pdf" download class="btn btn-2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn-2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
   </div>
   <div class="copy-right">
-    <p><i class="fa-solid fa-copyright"></i>opyright by<i class="fa-solid fa-at"></i> harishbhong</p>
+    <p><i class="fa-solid fa-copyright"></i> 2026 Harish Bhong • Built with an /eternal dev style.</p>
   </div>
 </div>
 
-  <script>
-// ************ About section Js ************
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname){
-        for(tablink of tablinks){
-          tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
     }
-// ********** END of About section Js *************
-  </script>
-
-  <script>
-    var sidemenu=document.getElementById("sidemenu");
-
-    function openmenu(){
-      sidemenu.style.right = "0";
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
     }
-    
-    function closemenu(){
-      sidemenu.style.right = "-200px";
-    }
-  </script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKT8gURkyGeb-34mKwyQ5np9cVrnYa8ipNn1b7Gc_bZkXWkha9MxKz_eVDBejNKLeBg/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.innerHTML = "Message sent successfully"
-          setTimeout(function(){
-            msg.innerHTML = ""
-          },5000) //this is 5000 milli seconds therefore it is 5sec
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+<script>
+  var sidemenu=document.getElementById("sidemenu");
 
-   <!-- to add scrolling effect -->
-   <script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
-    
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-    
-          // Store hash
-          var hash = this.hash;
-    
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 800, function(){
-    
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
+  function openmenu(){
+    sidemenu.style.right = "0";
+  }
+
+  function closemenu(){
+    sidemenu.style.right = "-240px";
+  }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyGKT8gURkyGeb-34mKwyQ5np9cVrnYa8ipNn1b7Gc_bZkXWkha9MxKz_eVDBejNKLeBg/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  $(document).ready(function(){
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+          window.location.hash = hash;
+        });
+      }
     });
-    </script>
-  <!--  -->
- 
-
-       <!-- from github.com//michalsnik/aos for animation -->
-       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-       <script>
-         AOS.init();
-       </script>
+  });
+</script>
 
 </body>
 </html>
